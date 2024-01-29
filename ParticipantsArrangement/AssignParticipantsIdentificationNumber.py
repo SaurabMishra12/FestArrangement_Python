@@ -32,7 +32,7 @@ def assignroll():
             continue
         uniqueCode = f"{i},{y}"
         rollCode.append(uniqueCode)
-        # phoneNo.append(rollCode)
+        phoneNo.append(rollCode)
         #print("list : ", uniqueCode)
         y = y + 1
 

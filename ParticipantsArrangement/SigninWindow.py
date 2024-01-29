@@ -17,7 +17,7 @@ def mobileNumber():
     if compReg.match(mobileNo):
             phoneNo.append(mobileNo)
             print("  Your Mobile Number Registered Successfully \n")
-            phoneNo.append(mobileNo)                      # store mobileNo in phoneNo list
+           # phoneNo.append(mobileNo)                      # store mobileNo in phoneNo list
     else:
             print("please enter valid mobile number")
             mobileNumber()
@@ -42,7 +42,7 @@ def Password():
 def participants_name():
     p = datetime.datetime.today()  # datetime function
     print("\n\tWelcome To Participant Portal\t\t\t\t[", p, "]", "\n")
-    for i in range(1):
+    for i in range(5):
         name = input("\tEnter Your Name:  ")
         listOfNames.append(name)  # store all inputs inside a list
 
