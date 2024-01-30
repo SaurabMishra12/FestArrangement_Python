@@ -18,6 +18,7 @@ def mobileNumber():
             phoneNo.append(mobileNo)
             print("  Your Mobile Number Registered Successfully \n")
            # phoneNo.append(mobileNo)                      # store mobileNo in phoneNo list
+            #phoneNo.append(mobileNo)                      # store mobileNo in phoneNo list
     else:
             print("please enter valid mobile number")
             mobileNumber()
