@@ -1,14 +1,18 @@
-# Take Name , PhoneNo , Password as a input
+# Take Name , PhoneNo , Password as an input
 # store them in an empty list
 
 
 import re
 import datetime
+from validate_email import validate_email
+
+
 
 listOfNames = []
 rollCode = []
 phoneNo = []
 passWord = []
+Email = []
 
 # defining a fncn
 def mobileNumber():
@@ -43,11 +47,25 @@ def Password():
 def participants_name():
     p = datetime.datetime.today()  # datetime function
     print("\n\tWelcome To Participant Portal\t\t\t\t[", p, "]", "\n")
-    for i in range(5):
+    for i in range(10):                    #Setting the Range
         name = input("\tEnter Your Name:  ")
         listOfNames.append(name)  # store all inputs inside a list
+        print("\n_______________________________________\n")
+        def emailid():
 
-        print("Hi! ", name, " \n In order to proceed please register with valid mobile number and password")
+            mail = input("Please Enter a valid email Address:   ")
+
+            is_valid = validate_email(mail)
+
+            if is_valid:
+                print("Your Email Address Registered Successfully")
+                Email.append(mail)
+            else:
+                print("It seems you have Entered Incorrect Email Address")
+                return emailid()
+
+        print("Hi! ", name, " \n In order to proceed please register with valid Details")
+        takemail= emailid()
         mobile = mobileNumber()
         password = Password()
         print("-----------------------------------------\n")
