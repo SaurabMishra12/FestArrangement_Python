@@ -1,12 +1,12 @@
-import pandas as pd
+import numpy as np
 
-df = pd.read_excel('BATCH-22 & 23 Mentor List.xlsx')
- m = df.to_csv()
+from pde import CartesianGrid, solve_laplace_equation
 
-df1 =
+grid = CartesianGrid([[0, 2 * np.pi]] * 2, 64)
+bcs = [{"value": "sin(y)"}, {"value": "sin(x)"}]
 
-
-print(m)
+res = solve_laplace_equation(grid, bcs)
+res.plot()
 
 
 

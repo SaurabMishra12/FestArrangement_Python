@@ -1,5 +1,8 @@
+
 import main
 import re
+
+
 
 # defining a fncn
 def mobileNumber():
@@ -10,6 +13,8 @@ def mobileNumber():
 
  if compReg.match(mobileNo):
      print("valid")
+
+
  else:
         print("invalid")
 

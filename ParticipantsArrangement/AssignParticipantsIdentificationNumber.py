@@ -7,12 +7,6 @@ Problem statement:
 5. assign role codes only to valid participant name
 """
 
-import re
-import datetime
-
-listOfNames = []
-rollCode = []
-phoneNo = []
 
 
 
@@ -23,17 +17,4 @@ phoneNo = []
 
 
 
-# assign unique roll code
-def assignroll():
-    y = 0
-    emptyString = re.compile(r'^\s*$')
-    for i in phoneNo:
-        if emptyString.match(str(i)):
-            continue
-        uniqueCode = f"{i},{y}"
-        rollCode.append(uniqueCode)
-        phoneNo.append(rollCode)
-        #print("list : ", uniqueCode)
-        y = y + 1
 
-    return rollCode
